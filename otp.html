@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi Input Form</title>
+  <style>
+    .input-box {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 4px;
+    }
+    .input-container {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="main-form" class="p-4 space-y-4">
+    
+    <!-- OTP Section -->
+    <div>
+      <h2>OTP</h2>
+      <div class="input-container otp-group">
+        <input required  type="text" maxlength="1" class="otp input-box" />
+        <input required  type="text" maxlength="1" class="otp input-box" />
+        <input required  type="text" maxlength="1" class="otp input-box" />
+        <input required  type="text" maxlength="1" class="otp input-box" />
+      </div>
+    </div>
+
+    <!-- Phone Number Section -->
+    <div>
+      <h2>Phone Number (10 digits)</h2>
+      <div class="input-container phone-group">
+        <!-- Generate 10 input boxes -->
+        <!-- You can use JS to dynamically create, but here we hardcode for clarity -->
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+        <input required  type="text" maxlength="1" class="phone input-box" />
+      </div>
+    </div>
+
+    <!-- Zip Code Section -->
+    <div>
+      <h2>ZIP Code (6 digits)</h2>
+      <div class="input-container zip-group">
+        <!-- Generate 6 input boxes -->
+        <input required  type="text" maxlength="1" class="zip input-box" />
+        <input required  type="text" maxlength="1" class="zip input-box" />
+        <input required  type="text" maxlength="1" class="zip input-box" />
+        <input required  type="text" maxlength="1" class="zip input-box" />
+        <input required  type="text" maxlength="1" class="zip input-box" />
+        <input required  type="text" maxlength="1" class="zip input-box" />
+      </div>
+    </div>
+
+    <button type="submit" class="p-2 bg-blue-500 text-white rounded">Submit</button>
+
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const form = document.getElementById("main-form");
+
+      // Create handlers for OTP, Phone, and Zip groups
+      const createInputHandlers = (inputs, expectedLength) => {
+
+        inputs.forEach((input, index) => {
+
+          input.addEventListener("input", (e) => {
+            const val = e.target.value;
+            if (/^\d$/.test(val) && index < inputs.length - 1) {
+              inputs[index + 1].focus();
+            } else if (!/^\d$/.test(val)) {
+              e.target.value = ""; // Clear non-digit values
+            }
+          });
+
+          input.addEventListener("keydown", (e) => {
+            const key = e.key;
+
+            if (!/^\d$/.test(key) && key !== "Backspace" && key !== "Delete" && key !== "ArrowLeft" && key !== "ArrowRight" && !e.metaKey) {
+              e.preventDefault();
+            }
+
+            if (key === "Backspace" || key === "Delete") {
+              e.preventDefault();
+              if (input.value !== "") {
+                input.value = "";
+              } else if (index > 0) {
+                inputs[index - 1].focus();
+                inputs[index - 1].value = "";
+              }
+            }
+
+            if (key === "ArrowLeft" && index > 0) {
+              inputs[index - 1].focus();
+            }
+            if (key === "ArrowRight" && index < inputs.length - 1) {
+              inputs[index + 1].focus();
+            }
+          });
+
+          input.addEventListener("focus", (e) => {
+            e.target.select();
+          });
+
+          input.addEventListener("paste", (e) => {
+            e.preventDefault();
+            const text = e.clipboardData.getData("text").trim();
+            if (!/^\d+$/.test(text)) return;
+            const chars = [...text];
+            chars.forEach((char, i) => {
+              if (inputs[i]) {
+                inputs[i].value = char;
+              }
+            });
+            if (inputs[chars.length - 1]) {
+              inputs[Math.min(chars.length, inputs.length) - 1].focus();
+            }
+          });
+
+        });
+      };
+
+      // Setup each group
+      const otpInputs = [...form.querySelectorAll(".otp")];
+      const phoneInputs = [...form.querySelectorAll(".phone")];
+      const zipInputs = [...form.querySelectorAll(".zip")];
+
+      createInputHandlers(otpInputs, 4);
+      createInputHandlers(phoneInputs, 10);
+      createInputHandlers(zipInputs, 6);
+
+      // ===== FORM SUBMISSION =====
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const otpValue = otpInputs.map(input => input.value).join("");
+        const phoneValue = phoneInputs.map(input => input.value).join("");
+        const zipValue = zipInputs.map(input => input.value).join("");
+
+        console.log("OTP:", otpValue);
+        console.log("Phone Number:", phoneValue);
+        console.log("ZIP Code:", zipValue);
+
+        // Example: Send to API, etc.
+      });
+
+    });
+  </script>
+
+</body>
+</html>

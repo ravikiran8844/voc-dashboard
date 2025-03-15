@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "@tailwindcss/cli": "^4.0.13",
+    "tailgrids": "^2.2.7",
     "tailwindcss": "^4.0.13"
   },
   "devDependencies": {
