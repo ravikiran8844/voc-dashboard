@@ -1,126 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="assets/css/output.css" />
-  </head>
 
-  <body class="bg-[#FCFAF9] min-h-screen roboto antialiased">
-    <header class="bg-[#F2EDE4] border-b border-[#C7C7C7]">
-      <nav class="px-4 md:px-16 py-4 flex justify-between gap-10 items-center">
-        <div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/css/output.css" />
+</head>
+
+<body class="bg-[#FCFAF9] min-h-screen roboto antialiased">
+  <header class="bg-[#F2EDE4] border-b border-[#C7C7C7]">
+    <nav class="px-4 md:px-16 py-4 flex justify-between gap-10 items-center">
+      <div>
+        <a href="/">
           <img src="assets/images/logo.svg" alt="logo" class="h-16" />
-        </div>
+        </a>
+      </div>
 
-        <div>
-          <div class="flex items-center gap-3">
-            <div class="text-end">
-              <div class="text-md font-medium text-black">Coimbatore</div>
-              <div class="text-[#7C7C7C] text-sm">Jewelone Showroom</div>
-            </div>
-            <div>
-              <img
-                class="size-12 block rounded-full"
-                src="assets/images/avatar.svg"
-                alt="avatar"
-              />
-            </div>
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="text-end">
+            <div class="text-md font-medium text-black">Coimbatore</div>
+            <div class="text-[#7C7C7C] text-sm">Jewelone Showroom</div>
+          </div>
+          <div>
+            <img class="size-12 block rounded-full" src="assets/images/avatar.svg" alt="avatar" />
+          </div>
 
-            <div>
-              <button
-                class="flex gap-1 items-center border cursor-pointer border-black rounded-sm py-2 px-4 hover:text-white hover:bg-black"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
-                  />
-                </svg>
+          <div>
+            <button
+              class="flex gap-1 items-center border cursor-pointer border-black rounded-sm py-2 px-4 hover:text-white hover:bg-black">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+              </svg>
 
-                Logout
-              </button>
-            </div>
+              Logout
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main
-      class="relative min-h-screen"
-      style="
+  <main class="relative min-h-screen" style="
         background-image: url('assets/images/watermark.png');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 240px;
-      "
-    >
-      <section class="p-4 py-8 md:p-16">
-        <div
-          class="border-b border-gray-300 pb-4 mb-4 flex gap-4 justify-between items-center flex-wrap"
-        >
-          <div>
-            <button
-              class="px-4 py-2 font-semibold border-b-4 text-lg border-[#9D4F2A] text-[#9D4F2A] relative"
-            >
-              Live Customer
+      ">
+    <section class="p-4 py-8 md:p-16">
+      <div class="border-b border-gray-300 pb-4 mb-4 flex gap-4 justify-between items-center flex-wrap">
+        <div>
+          <button class="px-4 py-2 font-semibold border-b-4 text-lg border-[#9D4F2A] text-[#9D4F2A] relative">
+            Live Customer
 
-              <span
-                class="absolute -top-3 -right-2 bg-green-200 text-green-500 flex items-center justify-center px-2 py-1 rounded-full text-sm"
-              >
-                0
-              </span>
-            </button>
-          </div>
-
-          <div>
-            <button
-              class="bg-[#9D4F2A] text-white px-6 py-3 rounded-sm font-medium shadow-md cursor-pointer flex gap-1 items-center"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-
-              Add customer
-            </button>
-          </div>
+            <span
+              class="absolute -top-3 -right-2 bg-green-200 text-green-500 flex items-center justify-center px-2 py-1 rounded-full text-sm">
+              0
+            </span>
+          </button>
         </div>
 
-        <div class="p-4">
-          <div class="flex flex-col gap-6 text-lg justify-center items-center max-w-md mx-auto text-center py-10">
-            <div>
-                <img class="h-20" src="assets/images/customers.svg" alt="customers">
+        <div>
+          <button onclick="addCustomer.showModal()"
+            class="bg-[#9D4F2A] text-white px-6 py-3 rounded-sm font-medium shadow-md cursor-pointer flex gap-1 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd"
+                d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                clip-rule="evenodd" />
+            </svg>
+
+            Add customer
+          </button>
+
+          <dialog id="addCustomer" class="modal">
+            <div class="modal-box p-0 max-w-2xl bg-[#FCFAF9]">
+              <div class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white">
+                <div class="pe-4">
+                  <img class="h-14" src="assets/images/logo-white.svg" alt="logo" />
+                </div>
+                <div class="text-xl text-white font-medium uppercase">
+                  Welcome to Jewel one
+                </div>
+              </div>
+
+              <div class="px-6 py-10 text-[#4E5356]">
+                <form id="add-customer-form">
+                  <!-- Name Field -->
+                  <div class="relative mb-4">
+                    <label for="customer-name"
+                      class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2">Name</label>
+                    <input id="customer-name" name="name" type="text" required
+                      class="bg-transparent border py-2 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3" />
+                  </div>
+
+                  <!-- Phone Number Fields -->
+                  <div class="mb-4">
+                    <div class="mb-1 text-sm">Phone Number</div>
+                    <div class="input-container phone-group">
+                      <input required type="text" maxlength="1" id="phone-1" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-2" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-3" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-4" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-5" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-6" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-7" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-8" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-9" class="phone input-box" />
+                      <input required type="text" maxlength="1" id="phone-10" class="phone input-box" />
+                    </div>
+                  </div>
+
+                  <!-- Email & Pincode -->
+                  <div class="flex flex-col xl:flex-row gap-4 xl:items-end mb-4">
+                    <div class="relative grow">
+                      <label for="customer-email"
+                        class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2">Email</label>
+                      <input type="email" id="customer-email" name="email" required
+                        class="bg-transparent border py-2 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3" />
+                    </div>
+
+                    <div>
+                      <div class="mb-1 text-sm text-black">Pincode</div>
+                      <div class="input-container zip-group">
+                        <input required type="text" maxlength="1" id="zip-1" class="zip input-box" />
+                        <input required type="text" maxlength="1" id="zip-2" class="zip input-box" />
+                        <input required type="text" maxlength="1" id="zip-3" class="zip input-box" />
+                        <input required type="text" maxlength="1" id="zip-4" class="zip input-box" />
+                        <input required type="text" maxlength="1" id="zip-5" class="zip input-box" />
+                        <input required type="text" maxlength="1" id="zip-6" class="zip input-box" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Source Options -->
+                  <div class="flex flex-wrap gap-4 mb-8">
+                    <div>
+                      <input id="source1" name="source" value="Television Commercial" type="radio" class="hidden" />
+                      <label for="source1" class="text-center">
+                        <img src="assets/images/icons/televison.svg" alt="Television Commercial" class="h-8" />
+                        <span> Television Commercial </span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input id="source2" name="source" value="Newspaper" type="radio" class="hidden" />
+                      <label for="source2" class="text-center">
+                        <img src="assets/images/icons/newspaper.svg" alt="newspaper" class="h-8" />
+                        <span> Newspaper </span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input id="source3" name="source" value="Social Media" type="radio" class="hidden" />
+                      <label for="source3" class="text-center">
+                        <img src="assets/images/icons/socialmedia.svg" alt="Social Media" class="h-8" />
+                        <span> Social Media </span>
+                      </label>
+                    </div>
+
+                    <div>
+                      <input id="source4" name="source" value="Flyer, Brochure, Flex" type="radio" class="hidden" />
+                      <label for="source4" class="text-center">
+                        <img src="assets/images/icons/brochure.svg" alt="Flyer, Brochure, Flex" class="h-8" />
+                        <span>Flyer, Brochure, Flex</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-end">
+                    <button type="submit" class="main-btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+              <form method="dialog" class="modal-backdrop z-10">
+                <button class="text-white absolute top-0 right-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </form>
             </div>
-            <div>
-              Once you have started to create a New Customer, you’ll see it listed here
-            </div>
+          </dialog>
+        </div>
+      </div>
+
+      <div class="p-4">
+        <div class="flex flex-col gap-6 text-lg justify-center items-center max-w-md mx-auto text-center py-10">
+          <div>
+              <img class="h-20" src="assets/images/customers.svg" alt="customers">
+          </div>
+          <div>
+            Once you have started to create a New Customer, you’ll see it listed here
           </div>
         </div>
-      </section>
-      <!-- <img class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 p-20 select-none" src="assets/images/watermark.png" alt=""> -->
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-  </body>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script>
+
+    // Create handlers for OTP, Phone, and Zip groups
+    const createInputHandlers = (inputs, expectedLength) => {
+      inputs.forEach((input, index) => {
+        input.addEventListener("input", (e) => {
+          const val = e.target.value;
+          if (/^\d$/.test(val) && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          } else if (!/^\d$/.test(val)) {
+            e.target.value = ""; // Clear non-digit values
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          const key = e.key;
+
+          if (
+            !/^\d$/.test(key) &&
+            key !== "Backspace" &&
+            key !== "Delete" &&
+            key !== "ArrowLeft" &&
+            key !== "ArrowRight" &&
+            !e.metaKey
+          ) {
+            e.preventDefault();
+          }
+
+          if (key === "Backspace" || key === "Delete") {
+            e.preventDefault();
+            if (input.value !== "") {
+              input.value = "";
+            } else if (index > 0) {
+              inputs[index - 1].focus();
+              inputs[index - 1].value = "";
+            }
+          }
+
+          if (key === "ArrowLeft" && index > 0) {
+            inputs[index - 1].focus();
+          }
+          if (key === "ArrowRight" && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+
+        input.addEventListener("focus", (e) => {
+          e.target.select();
+        });
+
+        input.addEventListener("paste", (e) => {
+          e.preventDefault();
+          const text = e.clipboardData.getData("text").trim();
+          if (!/^\d+$/.test(text)) return;
+          const chars = [...text];
+          chars.forEach((char, i) => {
+            if (inputs[i]) {
+              inputs[i].value = char;
+            }
+          });
+          if (inputs[chars.length - 1]) {
+            inputs[Math.min(chars.length, inputs.length) - 1].focus();
+          }
+        });
+      });
+    };
+
+    function addCustomerForm() {
+      const form = document.getElementById("add-customer-form");
+
+      const phoneInputs = [...form.querySelectorAll(".phone")];
+      const zipInputs = [...form.querySelectorAll(".zip")];
+
+      createInputHandlers(phoneInputs, 10);
+      createInputHandlers(zipInputs, 6);
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("customer-name").value;
+        const email = document.getElementById("customer-email").value;
+
+        const phoneNumber = Array.from(phoneInputs).map(input => input.value).join('');
+        const zipCode = Array.from(zipInputs).map(input => input.value).join('');
+
+        
+
+        const source =
+          form.querySelector('input[name="source"]:checked')?.value || "";
+
+        console.log({
+          name,
+          phoneNumber,
+          email,
+          zipCode,
+          source,
+        });
+      });
+    }
+
+    addCustomerForm();
+
+
+
+
+
+
+
+    function viewCustomerDetails(customer) {
+      console.log(customer, "customer");
+      const form = document.getElementById("customer-details-form");
+
+      const phoneInputs = form.querySelectorAll(".phone.input-box");
+
+      const zipInputs = form.querySelectorAll(".zip.input-box");
+
+
+      createInputHandlers(phoneInputs, 10);
+      createInputHandlers(zipInputs, 6);
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+
+        const phoneNumber = Array.from(phoneInputs).map(input => input.value).join('');
+        const pincode = Array.from(zipInputs).map(input => input.value).join('');
+
+        console.log({
+          phoneNumber,
+          pincode,
+        });
+      });
+
+    }
+  </script>
+
+  <script>
+    function getfeedbackData() {
+      return {
+        open: false,
+        step: 1,
+        customerType: "",
+        errors: {},
+        formData: {
+          customerId: "",
+          salesExecutive: "",
+          customerType: "",
+          purchasedFeedback: {
+            cleanlinessRating: "",
+            designUniqueness: "",
+            designPricingComparison: "",
+            serviceSatisfaction: "",
+            staffFriendliness: "",
+            staffKnowledge: "",
+            staffAttentiveness: "",
+          },
+          nonPurchasedFeedback: { reason: "" },
+        },
+        validateStep1() {
+          this.errors = {};
+          if (!this.formData.salesExecutive) {
+            this.errors.salesExecutive = "Please select a sales executive.";
+          }
+          if (!this.formData.customerType) {
+            this.errors.customerType = "Please select a customer type.";
+          }
+          if (Object.keys(this.errors).length === 0) {
+            this.step = 2;
+          }
+        },
+        validateStep2() {
+          this.errors = {};
+          if (this.customerType === "purchased") {
+            if (!this.formData.purchasedFeedback.cleanlinessRating) {
+              this.errors.cleanlinessRating = "Please select an option.";
+            }
+            if (!this.formData.purchasedFeedback.designUniqueness) {
+              this.errors.designUniqueness = "Please select an option.";
+            }
+            if (!this.formData.purchasedFeedback.designPricingComparison) {
+              this.errors.designPricingComparison =
+                "Please select an option.";
+            }
+
+            if (Object.keys(this.errors).length === 0) {
+              this.step = 3;
+            }
+          } else {
+            if (!this.formData.nonPurchasedFeedback.reason) {
+              this.errors.reason = "Please select a reason.";
+            }
+
+            if (Object.keys(this.errors).length === 0) {
+              // Create filtered form data for non-purchased
+              const filteredData = {
+                customerId: this.formData.customerId,
+                salesExecutive: this.formData.salesExecutive,
+                customerType: this.formData.customerType,
+                nonPurchasedFeedback: this.formData.nonPurchasedFeedback,
+              };
+
+              console.log("Non-Purchased Feedback Data:", filteredData);
+              this.step = 4;
+            }
+          }
+        },
+
+        validateStep3() {
+          this.errors = {};
+          if (this.customerType === "purchased") {
+            if (!this.formData.purchasedFeedback.serviceSatisfaction) {
+              this.errors.serviceSatisfaction = "Please select an option.";
+            }
+            if (!this.formData.purchasedFeedback.staffFriendliness) {
+              this.errors.staffFriendliness = "Please select an option.";
+            }
+            if (!this.formData.purchasedFeedback.staffKnowledge) {
+              this.errors.staffKnowledge = "Please select an option.";
+            }
+            if (!this.formData.purchasedFeedback.staffAttentiveness) {
+              this.errors.staffAttentiveness = "Please select an option.";
+            }
+          }
+
+          if (Object.keys(this.errors).length === 0) {
+            // Create filtered form data for purchased
+            const filteredData = {
+              customerId: this.formData.customerId,
+              salesExecutive: this.formData.salesExecutive,
+              customerType: this.formData.customerType,
+              purchasedFeedback: this.formData.purchasedFeedback,
+            };
+
+            console.log("Purchased Feedback Data:", filteredData);
+            this.step = 4;
+          }
+        },
+        clearData() {
+          setTimeout(() => {
+            this.open = false;
+            this.step = 1;
+            this.customerType = "";
+            this.errors = {};
+            this.formData = {
+              customerId: "",
+              salesExecutive: "",
+              customerType: "",
+              purchasedFeedback: {
+                cleanlinessRating: "",
+                designUniqueness: "",
+                designPricingComparison: "",
+                serviceSatisfaction: "",
+                staffFriendliness: "",
+                staffKnowledge: "",
+                staffAttentiveness: "",
+              },
+              nonPurchasedFeedback: { reason: "" },
+            };
+          }, 200);
+        },
+      };
+    }
+  </script>
+</body>
+
 </html>
