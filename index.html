@@ -11,7 +11,9 @@
     <header class="bg-[#F2EDE4] border-b border-[#C7C7C7]">
       <nav class="px-4 md:px-16 py-4 flex justify-between gap-10 items-center">
         <div>
-          <img src="assets/images/logo.svg" alt="logo" class="h-16" />
+          <a href="/">
+            <img src="assets/images/logo.svg" alt="logo" class="h-16" />
+          </a>
         </div>
 
         <div>
@@ -24,27 +26,23 @@
               <img
                 class="size-12 block rounded-full"
                 src="assets/images/avatar.svg"
-                alt="avatar"
-              />
+                alt="avatar" />
             </div>
 
             <div>
               <button
-                class="flex gap-1 items-center border cursor-pointer border-black rounded-sm py-2 px-4 hover:text-white hover:bg-black"
-              >
+                class="flex gap-1 items-center border cursor-pointer border-black rounded-sm py-2 px-4 hover:text-white hover:bg-black">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-6"
-                >
+                  class="size-6">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
-                  />
+                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                 </svg>
 
                 Logout
@@ -61,22 +59,17 @@
         background-image: url('assets/images/watermark.png');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 240px;
-      "
-    >
+      ">
       <section class="p-4 py-8 md:p-16">
         <div
-          class="border-b border-gray-300 pb-4 mb-4 flex gap-4 justify-between items-center flex-wrap"
-        >
+          class="border-b border-gray-300 pb-4 mb-4 flex gap-4 justify-between items-center flex-wrap">
           <div>
             <button
-              class="px-4 py-2 font-semibold border-b-4 text-lg border-[#9D4F2A] text-[#9D4F2A] relative"
-            >
+              class="px-4 py-2 font-semibold border-b-4 text-lg border-[#9D4F2A] text-[#9D4F2A] relative">
               Live Customer
 
               <span
-                class="absolute -top-3 -right-2 bg-green-200 text-green-500 flex items-center justify-center px-2 py-1 rounded-full text-sm"
-              >
+                class="absolute -top-3 -right-2 bg-green-200 text-green-500 flex items-center justify-center px-2 py-1 rounded-full text-sm">
                 0
               </span>
             </button>
@@ -85,19 +78,16 @@
           <div>
             <button
               onclick="addCustomer.showModal()"
-              class="bg-[#9D4F2A] text-white px-6 py-3 rounded-sm font-medium shadow-md cursor-pointer flex gap-1 items-center"
-            >
+              class="bg-[#9D4F2A] text-white px-6 py-3 rounded-sm font-medium shadow-md cursor-pointer flex gap-1 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-6"
-              >
+                class="size-6">
                 <path
                   fill-rule="evenodd"
                   d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
-                  clip-rule="evenodd"
-                />
+                  clip-rule="evenodd" />
               </svg>
 
               Add customer
@@ -106,122 +96,113 @@
             <dialog id="addCustomer" class="modal">
               <div class="modal-box p-0 max-w-2xl bg-[#FCFAF9]">
                 <div
-                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white"
-                >
+                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white">
                   <div class="pe-4">
                     <img
                       class="h-14"
                       src="assets/images/logo-white.svg"
-                      alt="logo"
-                    />
+                      alt="logo" />
                   </div>
-                  <div class="text-2xl text-white font-medium uppercase">
+                  <div class="text-xl text-white font-medium uppercase">
                     Welcome to Jewel one
                   </div>
                 </div>
 
                 <div class="px-6 py-10 text-[#4E5356]">
                   <form id="add-customer-form">
-                    <div class="mb-6 text-sm text-[#9D4F2A] font-semibold">
-                      Please enter your below details
-                    </div>
-
+                    <!-- Name Field -->
                     <div class="relative mb-4">
                       <label
-                        class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2"
-                        >Name</label
-                      >
+                        for="customer-name"
+                        class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2">Name</label>
                       <input
+                        id="customer-name"
+                        name="name"
                         type="text"
                         required
-                        class="bg-transparent border py-2 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3"
-                      />
+                        class="bg-transparent border py-2 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3" />
                     </div>
 
+                    <!-- Phone Number Fields -->
                     <div class="mb-4">
                       <div class="mb-1 text-sm">Phone Number</div>
                       <div class="input-container phone-group">
-                        <!-- Generate 10 input boxes -->
-                        <!-- You can use JS to dynamically create, but here we hardcode for clarity -->
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-1"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-2"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-3"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-4"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-5"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-6"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-7"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-8"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-9"
+                          class="phone input-box" />
                         <input
                           required
                           type="text"
                           maxlength="1"
-                          class="phone input-box"
-                        />
+                          id="phone-10"
+                          class="phone input-box" />
                       </div>
                     </div>
 
+                    <!-- Email & Pincode -->
                     <div
-                      class="flex flex-col xl:flex-row gap-4 xl:items-end mb-4"
-                    >
+                      class="flex flex-col xl:flex-row gap-4 xl:items-end mb-4">
                       <div class="relative grow">
                         <label
-                          for="email"
-                          class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2"
-                          >Email</label
-                        >
+                          for="customer-email"
+                          class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2">Email</label>
                         <input
                           type="email"
-                          id="email"
+                          id="customer-email"
                           name="email"
                           required
-                          class="bg-transparent border py-2 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3"
-                        />
+                          class="bg-transparent border py-2 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3" />
                       </div>
 
                       <div>
@@ -231,46 +212,43 @@
                             required
                             type="text"
                             maxlength="1"
-                            class="zip input-box"
-                          />
+                            id="zip-1"
+                            class="zip input-box" />
                           <input
                             required
                             type="text"
                             maxlength="1"
-                            class="zip input-box"
-                          />
+                            id="zip-2"
+                            class="zip input-box" />
                           <input
                             required
                             type="text"
                             maxlength="1"
-                            class="zip input-box"
-                          />
+                            id="zip-3"
+                            class="zip input-box" />
                           <input
                             required
                             type="text"
                             maxlength="1"
-                            class="zip input-box"
-                          />
+                            id="zip-4"
+                            class="zip input-box" />
                           <input
                             required
                             type="text"
                             maxlength="1"
-                            class="zip input-box"
-                          />
+                            id="zip-5"
+                            class="zip input-box" />
                           <input
                             required
                             type="text"
                             maxlength="1"
-                            class="zip input-box"
-                          />
+                            id="zip-6"
+                            class="zip input-box" />
                         </div>
                       </div>
                     </div>
 
-                    <div class="mb-6 text-sm text-[#9D4F2A] font-semibold">
-                      How do you know about Jewel One?
-                    </div>
-
+                    <!-- Source Options -->
                     <div class="flex flex-wrap gap-4 mb-8">
                       <div>
                         <input
@@ -278,14 +256,12 @@
                           name="source"
                           value="Television Commercial"
                           type="radio"
-                          class="hidden"
-                        />
+                          class="hidden" />
                         <label for="source1" class="text-center">
                           <img
                             src="assets/images/icons/televison.svg"
                             alt="Television Commercial"
-                            class="h-8"
-                          />
+                            class="h-8" />
                           <span> Television Commercial </span>
                         </label>
                       </div>
@@ -296,14 +272,12 @@
                           name="source"
                           value="Newspaper"
                           type="radio"
-                          class="hidden"
-                        />
+                          class="hidden" />
                         <label for="source2" class="text-center">
                           <img
                             src="assets/images/icons/newspaper.svg"
                             alt="newspaper"
-                            class="h-8"
-                          />
+                            class="h-8" />
                           <span> Newspaper </span>
                         </label>
                       </div>
@@ -314,14 +288,12 @@
                           name="source"
                           value="Social Media"
                           type="radio"
-                          class="hidden"
-                        />
+                          class="hidden" />
                         <label for="source3" class="text-center">
                           <img
                             src="assets/images/icons/socialmedia.svg"
                             alt="Social Media"
-                            class="h-8"
-                          />
+                            class="h-8" />
                           <span> Social Media </span>
                         </label>
                       </div>
@@ -330,25 +302,21 @@
                         <input
                           id="source4"
                           name="source"
-                          value="Flyer, Brochure,
-                                              Flex"
+                          value="Flyer, Brochure, Flex"
                           type="radio"
-                          class="hidden"
-                        />
+                          class="hidden" />
                         <label for="source4" class="text-center">
                           <img
                             src="assets/images/icons/brochure.svg"
-                            alt="Flyer, Brochure,
-                                                Flex"
-                            class="h-8"
-                          />
+                            alt="Flyer, Brochure, Flex"
+                            class="h-8" />
                           <span>Flyer, Brochure, Flex</span>
                         </label>
                       </div>
                     </div>
 
                     <div class="flex justify-end">
-                      <button class="main-btn">Submit</button>
+                      <button type="submit" class="main-btn">Submit</button>
                     </div>
                   </form>
                 </div>
@@ -359,13 +327,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      class="size-6"
-                    >
+                      class="size-6">
                       <path
                         fill-rule="evenodd"
                         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                        clip-rule="evenodd"
-                      />
+                        clip-rule="evenodd" />
                     </svg>
                   </button>
                 </form>
@@ -376,12 +342,10 @@
 
         <div class="p-4" x-data="getfeedbackData">
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 flex-wrap"
-          >
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 flex-wrap">
             <div class="bg-[#FFEDD9] overflow-hidden rounded-lg">
               <div
-                class="text-[#4E5356] space-y-1 bg-white rounded-lg border border-[#EEE6E2] p-6"
-              >
+                class="text-[#4E5356] space-y-1 bg-white rounded-lg border border-[#EEE6E2] p-6">
                 <div class="flex gap-1 items-center">
                   <span class="w-2 h-2 rounded-full bg-green-500 block"></span>
                   <span class="text-md"> Customer #001 </span>
@@ -389,8 +353,7 @@
                 <div class="text-xl font-semibold">Madhu</div>
                 <div class="my-4">
                   <button
-                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-[#9D4F2A] bg-white hover:bg-[#9D4F2A] hover:text-white"
-                  >
+                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-[#9D4F2A] bg-white hover:bg-[#9D4F2A] hover:text-white">
                     View Details
                   </button>
                 </div>
@@ -398,21 +361,17 @@
                   <button
                     onclick="getFeedback.showModal()"
                     @click="open = true; formData.customerId = '001'"
-                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-black bg-white hover:bg-[#9D4F2A] hover:text-white"
-                  >
+                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-black bg-white hover:bg-[#9D4F2A] hover:text-white">
                     Get Feedback
                   </button>
                 </div>
               </div>
               <div class="text-sm py-2 px-6">20 mins 56 secs</div>
-
             </div>
 
-            
             <div class="bg-[#FFEDD9] overflow-hidden rounded-lg">
               <div
-                class="text-[#4E5356] space-y-1 bg-white rounded-lg border border-[#EEE6E2] p-6"
-              >
+                class="text-[#4E5356] space-y-1 bg-white rounded-lg border border-[#EEE6E2] p-6">
                 <div class="flex gap-1 items-center">
                   <span class="w-2 h-2 rounded-full bg-green-500 block"></span>
                   <span class="text-md"> Customer #002 </span>
@@ -420,8 +379,7 @@
                 <div class="text-xl font-semibold">Gavya</div>
                 <div class="my-4">
                   <button
-                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-[#9D4F2A] bg-white hover:bg-[#9D4F2A] hover:text-white"
-                  >
+                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-[#9D4F2A] bg-white hover:bg-[#9D4F2A] hover:text-white">
                     View Details
                   </button>
                 </div>
@@ -429,21 +387,17 @@
                   <button
                     onclick="getFeedback.showModal()"
                     @click="open = true; formData.customerId = '002'"
-                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-black bg-white hover:bg-[#9D4F2A] hover:text-white"
-                  >
+                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-black bg-white hover:bg-[#9D4F2A] hover:text-white">
                     Get Feedback
                   </button>
                 </div>
               </div>
               <div class="text-sm py-2 px-6">20 mins 56 secs</div>
-
             </div>
-
 
             <div class="bg-[#FFEDD9] overflow-hidden rounded-lg">
               <div
-                class="text-[#4E5356] space-y-1 bg-white rounded-lg border border-[#EEE6E2] p-6"
-              >
+                class="text-[#4E5356] space-y-1 bg-white rounded-lg border border-[#EEE6E2] p-6">
                 <div class="flex gap-1 items-center">
                   <span class="w-2 h-2 rounded-full bg-green-500 block"></span>
                   <span class="text-md"> Customer #003 </span>
@@ -451,8 +405,7 @@
                 <div class="text-xl font-semibold">Jane</div>
                 <div class="my-4">
                   <button
-                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-[#9D4F2A] bg-white hover:bg-[#9D4F2A] hover:text-white"
-                  >
+                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-[#9D4F2A] bg-white hover:bg-[#9D4F2A] hover:text-white">
                     View Details
                   </button>
                 </div>
@@ -460,35 +413,27 @@
                   <button
                     onclick="getFeedback.showModal()"
                     @click="open = true; formData.customerId = '003'"
-                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-black bg-white hover:bg-[#9D4F2A] hover:text-white"
-                  >
+                    class="px-4 py-2 block border cursor-pointer border-gray-300 shadow-md w-full rounded-md text-black bg-white hover:bg-[#9D4F2A] hover:text-white">
                     Get Feedback
                   </button>
                 </div>
               </div>
               <div class="text-sm py-2 px-6">20 mins 56 secs</div>
-
             </div>
-
-
-
-
           </div>
 
           <dialog id="getFeedback" class="modal">
-            <div class="modal-box p-0 max-w-2xl min-h-60 bg-[#FCFAF9]">
+            <div class="modal-box p-0 max-w-3xl min-h-60 bg-[#FCFAF9]">
               <div x-show="step === 1" x-cloak>
                 <div
-                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white"
-                >
+                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white">
                   <div class="pe-4">
                     <img
                       class="h-14"
                       src="assets/images/logo-white.svg"
-                      alt="logo"
-                    />
+                      alt="logo" />
                   </div>
-                  <div class="text-2xl text-white font-medium uppercase">
+                  <div class="text-xl text-white font-medium uppercase">
                     showroom staff usage
                   </div>
                 </div>
@@ -499,14 +444,12 @@
                     <div class="relative mb-6">
                       <!-- Sales Executive Select -->
                       <label
-                        class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2"
-                        >Sales Executive Name</label
-                      >
+                        class="text-black absolute transform -translate-y-2 left-4 bg-[#FCFAF9] text-sm px-2">Sales
+                        Executive Name</label>
                       <select
                         x-model="formData.salesExecutive"
                         @change="errors.salesExecutive = ''"
-                        class="bg-transparent border py-3 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3"
-                      >
+                        class="bg-transparent border py-3 border-[#C7C7C7] text-black focus:outline-black placeholder:!text-black rounded-lg block w-full p-3">
                         <option value>Select Executive</option>
                         <option value="John Doe">John Doe</option>
                         <option value="Jane Smith">Jane Smith</option>
@@ -514,36 +457,31 @@
                       <p
                         x-show="errors.salesExecutive"
                         class="text-red-500 text-sm my-2"
-                        x-text="errors.salesExecutive"
-                      ></p>
+                        x-text="errors.salesExecutive"></p>
                     </div>
 
                     <!-- Customer Type Selection -->
                     <label
-                      class="block mb-4 text-md font-semibold text-[#9D4F2A]"
-                      >Customer Type</label
-                    >
+                      class="block mb-4 text-md font-semibold text-[#9D4F2A]">Customer
+                      Type</label>
                     <div class="flex gap-4">
                       <label
                         @click="formData.customerType = 'Purchased Customer'; errors.customerType = ''; customerType = 'purchased'"
                         class="cursor-pointer p-3 border rounded-lg w-1/2 text-center"
-                        :class="{'bg-green-500 text-white': formData.customerType === 'Purchased Customer'}"
-                      >
+                        :class="{'bg-green-500 text-white': formData.customerType === 'Purchased Customer'}">
                         Purchased Customer
                       </label>
                       <label
                         @click="formData.customerType = 'Non-Purchased Customer'; errors.customerType = ''; customerType = 'non-purchased'"
                         class="cursor-pointer p-3 border rounded-lg w-1/2 text-center"
-                        :class="{'bg-red-500 text-white': formData.customerType === 'Non-Purchased Customer'}"
-                      >
+                        :class="{'bg-red-500 text-white': formData.customerType === 'Non-Purchased Customer'}">
                         Non-Purchased Customer
                       </label>
                     </div>
                     <p
                       x-show="errors.customerType"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.customerType"
-                    ></p>
+                      x-text="errors.customerType"></p>
 
                     <button @click="validateStep1()" class="mt-8 main-btn">
                       Continue
@@ -554,17 +492,16 @@
 
               <div x-show="step === 2 && customerType === 'purchased'" x-cloak>
                 <div
-                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white"
-                >
+                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white">
                   <div class="pe-4">
                     <img
                       class="h-14"
                       src="assets/images/logo-white.svg"
-                      alt="logo"
-                    />
+                      alt="logo" />
                   </div>
-                  <div class="text-2xl text-white font-medium uppercase">
-                    Welcome to Jewel one
+                  <div class="text-xl text-white font-medium uppercase">
+                    Please share your thoughts about your
+                    <b>IN-Store Experience</b>
                   </div>
                 </div>
 
@@ -572,29 +509,25 @@
                   <!-- Step 2A: Purchased Customer Feedback -->
                   <div>
                     <!-- Satisfaction -->
-                    <label class="block mb-4"
-                      >1.⁠ ⁠How would you rate the cleanliness and maintenance
-                      of our showroom?</label
-                    >
+                    <label class="block mb-4">1.⁠ ⁠How would you rate the
+                      cleanliness and maintenance
+                      of our showroom?</label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback.cleanlinessRating = 'Excellent'; errors.cleanlinessRating = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.cleanlinessRating = 'Good'; errors.cleanlinessRating = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Good'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
@@ -602,22 +535,19 @@
                       </label>
                       <label
                         @click="formData.purchasedFeedback.cleanlinessRating = 'Average'; errors.cleanlinessRating = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Average'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.cleanlinessRating = 'Poor'; errors.cleanlinessRating = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Poor'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.cleanlinessRating === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -627,33 +557,28 @@
                     <p
                       x-show="errors.cleanlinessRating"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.cleanlinessRating"
-                    ></p>
+                      x-text="errors.cleanlinessRating"></p>
 
-                    <label class="block mb-4"
-                      >1.⁠ ⁠How would you rate the cleanliness and maintenance
-                      of our showroom?</label
-                    >
+                    <label class="block mb-4">1.⁠ ⁠How would you rate the
+                      cleanliness and maintenance
+                      of our showroom?</label>
 
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback.designUniqueness = 'Excellent'; errors.designUniqueness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designUniqueness === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designUniqueness === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.designUniqueness = 'Good'; errors.designUniqueness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designUniqueness === 'Good'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designUniqueness === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
@@ -661,22 +586,19 @@
                       </label>
                       <label
                         @click="formData.purchasedFeedback.designUniqueness = 'Average'; errors.designUniqueness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.designUniqueness === 'Average'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.designUniqueness === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.designUniqueness = 'Poor'; errors.designUniqueness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.designUniqueness === 'Poor'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.designUniqueness === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -686,32 +608,27 @@
                     <p
                       x-show="errors.designUniqueness"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.designUniqueness"
-                    ></p>
+                      x-text="errors.designUniqueness"></p>
 
-                    <label class="block mb-4"
-                      >1.⁠ ⁠How would you rate the cleanliness and maintenance
-                      of our showroom?</label
-                    >
+                    <label class="block mb-4">1.⁠ ⁠How would you rate the
+                      cleanliness and maintenance
+                      of our showroom?</label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback.designPricingComparison = 'Excellent'; errors.designPricingComparison = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.designPricingComparison = 'Good'; errors.designPricingComparison = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Good'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
@@ -719,22 +636,19 @@
                       </label>
                       <label
                         @click="formData.purchasedFeedback.designPricingComparison = 'Average'; errors.designPricingComparison = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Average'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.designPricingComparison = 'Poor'; errors.designPricingComparison = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Poor'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.designPricingComparison === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -744,8 +658,7 @@
                     <p
                       x-show="errors.designPricingComparison"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.designPricingComparison"
-                    ></p>
+                      x-text="errors.designPricingComparison"></p>
 
                     <button @click="validateStep2()" class="mt-8 main-btn">
                       Continue
@@ -756,20 +669,17 @@
 
               <div
                 x-show="step === 2 && customerType === 'non-purchased'"
-                x-cloak
-              >
+                x-cloak>
                 <div
-                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white"
-                >
+                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white">
                   <div class="pe-4">
                     <img
                       class="h-14"
                       src="assets/images/logo-white.svg"
-                      alt="logo"
-                    />
+                      alt="logo" />
                   </div>
-                  <div class="text-2xl text-white font-medium uppercase">
-                    Welcome to Jewel one
+                  <div class="text-xl text-white font-medium uppercase">
+                    Please let us know how we can serve you better?
                   </div>
                 </div>
 
@@ -778,30 +688,91 @@
                   <div>
                     <!-- Reason -->
                     <label
-                      class="block mb-4 text-md text-[#9D4F2A] font-semibold"
-                      >What was the reason for not purchasing today?</label
-                    >
-                    <div class="flex gap-4">
+                      class="block mb-4 text-md text-[#9D4F2A] font-semibold">What
+                      was the reason for not purchasing today?</label>
+                    <div class="grid gap-6 grid-cols-2 md:grid-cols-4">
+
                       <label
-                        @click="formData.nonPurchasedFeedback.reason = 'Too expensive'; errors.reason = ''"
-                        class="cursor-pointer p-3 border rounded-lg w-1/2 text-center"
-                        :class="{'bg-red-500 text-white': formData.nonPurchasedFeedback.reason === 'Too expensive'}"
-                      >
-                        Too Expensive
+                        @click="formData.nonPurchasedFeedback.reason = 'Expected design not available'; errors.reason = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!border-[#9D4F2A] !bg-red-100 ring ring-[#9D4F2A]': formData.nonPurchasedFeedback.reason === 'Expected design not available'}">
+                        <div>
+                          <img
+                          class="h-8"
+                            src="assets/images/icons/non-purchase-reason/icon1.svg"
+                            alt="Expected design not available" />
+                        </div>
+                        <div>Expected design not available</div>
                       </label>
+                   
+                   
                       <label
-                        @click="formData.nonPurchasedFeedback.reason = 'Not needed'; errors.reason = ''"
-                        class="cursor-pointer p-3 border rounded-lg w-1/2 text-center"
-                        :class="{'bg-green-500 text-white': formData.nonPurchasedFeedback.reason === 'Not needed'}"
-                      >
-                        Not Needed
+                      @click="formData.nonPurchasedFeedback.reason = 'Less Collection'; errors.reason = ''"
+                      class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                      :class="{'!border-[#9D4F2A] !bg-red-100 ring ring-[#9D4F2A]': formData.nonPurchasedFeedback.reason === 'Less Collection'}">
+                      <div>
+                        <img
+                        class="h-8"
+                        src="assets/images/icons/non-purchase-reason/icon2.svg"
+                        alt="Less Collection" />
+                      </div>
+                      <div>Less Collection</div>
+                    </label>
+
+                    <label
+                        @click="formData.nonPurchasedFeedback.reason = 'Service was Bad'; errors.reason = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!border-[#9D4F2A] !bg-red-100 ring ring-[#9D4F2A]': formData.nonPurchasedFeedback.reason === 'Service was Bad'}">
+                        <div>
+                          <img
+                          class="h-8"
+                          src="assets/images/icons/non-purchase-reason/icon3.svg"
+                          alt="Service was Bad" />
+                        </div>
+                        <div>Service was Bad</div>
                       </label>
+
+                      <label
+                        @click="formData.nonPurchasedFeedback.reason = 'Size not available'; errors.reason = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!border-[#9D4F2A] !bg-red-100 ring ring-[#9D4F2A]': formData.nonPurchasedFeedback.reason === 'Size not available'}">
+                        <div>
+                          <img 
+                          class="h-8"
+                          src="assets/images/icons/non-purchase-reason/icon4.svg"
+                          alt="Size not available" />
+                        </div>
+                        <div>Size not available</div>
+                      </label>
+
+                      <label
+                        @click="formData.nonPurchasedFeedback.reason = 'Price is too high'; errors.reason = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!border-[#9D4F2A] !bg-red-100 ring ring-[#9D4F2A]': formData.nonPurchasedFeedback.reason === 'Price is too high'}">
+                        <div>
+                          <img
+                          class="h-8"
+                          src="assets/images/icons/non-purchase-reason/icon5.svg"
+                          alt="Price is too high" />
+                        </div>
+                        <div>Price is too high</div>
+                      </label>
+
+
+                      <label
+                        @click="formData.nonPurchasedFeedback.reason = 'Others'; errors.reason = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center flex items-center justify-center content-center"
+                        :class="{'!border-[#9D4F2A] !bg-red-100 ring ring-[#9D4F2A]': formData.nonPurchasedFeedback.reason === 'Others'}">
+                     
+                        <div>Others</div>
+                      </label>
+
+
                     </div>
                     <p
                       x-show="errors.reason"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.reason"
-                    ></p>
+                      x-text="errors.reason"></p>
 
                     <button @click="validateStep2()" class="mt-8 main-btn">
                       Continue
@@ -812,17 +783,15 @@
 
               <div x-show="step === 3 && customerType === 'purchased'" x-cloak>
                 <div
-                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white"
-                >
+                  class="flex gap-4 items-center bg-[#9D4F2A] p-4 divide-x divide-white">
                   <div class="pe-4">
                     <img
                       class="h-14"
                       src="assets/images/logo-white.svg"
-                      alt="logo"
-                    />
+                      alt="logo" />
                   </div>
-                  <div class="text-2xl text-white font-medium uppercase">
-                    Welcome to Jewel one
+                  <div class="text-xl text-white font-medium uppercase">
+                    How was your experience with our <b>Sales Executive</b>
                   </div>
                 </div>
 
@@ -830,29 +799,26 @@
                   <!-- Step 3A: Purchased Customer Additional Feedback -->
                   <div>
                     <!-- Question 1 -->
-                    <label class="block mb-4"
-                      >1.⁠ ⁠How satisfied are you with the overall service
+                    <label class="block mb-4">1.⁠ ⁠How satisfied are you with
+                      the overall service
                       provided by our showroom staff?
                     </label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback.serviceSatisfaction = 'Excellent'; errors.serviceSatisfaction = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.serviceSatisfaction = 'Good'; errors.serviceSatisfaction = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Good'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
@@ -860,22 +826,19 @@
                       </label>
                       <label
                         @click="formData.purchasedFeedback.serviceSatisfaction = 'Average'; errors.serviceSatisfaction = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Average'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.serviceSatisfaction = 'Poor'; errors.serviceSatisfaction = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Poor'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.serviceSatisfaction === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -885,56 +848,48 @@
                     <p
                       x-show="errors.serviceSatisfaction"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.serviceSatisfaction"
-                    ></p>
+                      x-text="errors.serviceSatisfaction"></p>
 
                     <!-- Question 2 -->
-                    <label class="block mb-4"
-                      >2.⁠ ⁠How would you rate the friendliness and courtesy of
-                      our showroom staff?</label
-                    >
+                    <label class="block mb-4">2.⁠ ⁠How would you rate the
+                      friendliness and courtesy of
+                      our showroom staff?</label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback. staffFriendliness = 'Excellent'; errors. staffFriendliness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback. staffFriendliness === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffFriendliness === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
-                        @click="formData.purchasedFeedback. staffFriendliness = 'Good'; errors. staffFriendliness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback. staffFriendliness === 'Good'}"
-                      >
+                        @click="formData.purchasedFeedback. staffFriendliness = 'Good'; errors.staffFriendliness = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback. staffFriendliness === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
                         <div>Good</div>
                       </label>
                       <label
-                        @click="formData.purchasedFeedback. staffFriendliness = 'Average'; errors. staffFriendliness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback. staffFriendliness === 'Average'}"
-                      >
+                        @click="formData.purchasedFeedback. staffFriendliness = 'Average'; errors.staffFriendliness = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback. staffFriendliness === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
-                        @click="formData.purchasedFeedback. staffFriendliness = 'Poor'; errors. staffFriendliness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback. staffFriendliness === 'Poor'}"
-                      >
+                        @click="formData.purchasedFeedback. staffFriendliness = 'Poor'; errors.staffFriendliness = ''"
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.staffFriendliness === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -944,33 +899,28 @@
                     <p
                       x-show="errors. staffFriendliness"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors. staffFriendliness"
-                    ></p>
+                      x-text="errors. staffFriendliness"></p>
 
                     <!-- Question 3 -->
-                    <label class="block mb-4"
-                      >3.⁠ ⁠How knowledgeable was our staff in explaining
-                      products and services?</label
-                    >
+                    <label class="block mb-4">3.⁠ ⁠How knowledgeable was our
+                      staff in explaining
+                      products and services?</label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback.staffKnowledge = 'Excellent'; errors.staffKnowledge = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.staffKnowledge = 'Good'; errors.staffKnowledge = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Good'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
@@ -978,22 +928,19 @@
                       </label>
                       <label
                         @click="formData.purchasedFeedback.staffKnowledge = 'Average'; errors.staffKnowledge = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Average'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.staffKnowledge = 'Poor'; errors.staffKnowledge = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Poor'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.staffKnowledge === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -1003,33 +950,28 @@
                     <p
                       x-show="errors.staffKnowledge"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.staffKnowledge"
-                    ></p>
+                      x-text="errors.staffKnowledge"></p>
 
                     <!-- Question 4 -->
-                    <label class="block mb-4"
-                      >4.How would you rate the attentiveness of our staff in
-                      assisting you?</label
-                    >
+                    <label class="block mb-4">4.How would you rate the
+                      attentiveness of our staff in
+                      assisting you?</label>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                       <label
                         @click="formData.purchasedFeedback.staffAttentiveness = 'Excellent'; errors.staffAttentiveness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Excellent'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Excellent'}">
                         <div>
                           <img
                             src="assets/images/icons/excellent.svg"
-                            alt="excellent"
-                          />
+                            alt="excellent" />
                         </div>
                         <div>Excellent</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.staffAttentiveness = 'Good'; errors.staffAttentiveness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Good'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-green-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Good'}">
                         <div>
                           <img src="assets/images/icons/good.svg" alt="good" />
                         </div>
@@ -1037,22 +979,19 @@
                       </label>
                       <label
                         @click="formData.purchasedFeedback.staffAttentiveness = 'Average'; errors.staffAttentiveness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Average'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-orange-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Average'}">
                         <div>
                           <img
                             src="assets/images/icons/average.svg"
-                            alt="average"
-                          />
+                            alt="average" />
                         </div>
                         <div>Average</div>
                       </label>
                       <label
                         @click="formData.purchasedFeedback.staffAttentiveness = 'Poor'; errors.staffAttentiveness = ''"
-                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2 grid-row-2 justify-items-center"
-                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Poor'}"
-                      >
+                        class="cursor-pointer p-3 border bg-white shadow rounded-lg text-center grid gap-2  justify-items-center content-center"
+                        :class="{'!bg-red-500 text-white': formData.purchasedFeedback.staffAttentiveness === 'Poor'}">
                         <div>
                           <img src="assets/images/icons/poor.svg" alt="poor" />
                         </div>
@@ -1062,8 +1001,7 @@
                     <p
                       x-show="errors.staffAttentiveness"
                       class="text-red-500 text-sm mt-2 mb-4"
-                      x-text="errors.staffAttentiveness"
-                    ></p>
+                      x-text="errors.staffAttentiveness"></p>
 
                     <!-- Continue Button -->
                     <button @click="validateStep3()" class="mt-8 main-btn">
@@ -1076,8 +1014,7 @@
               <div
                 class="px-6 py-10 text-[#4E5356]"
                 x-show="step === 4"
-                x-cloak
-              >
+                x-cloak>
                 <!-- Step 3: Thank You -->
                 <div class="flex flex-col items-center justify-center gap-6">
                   <div>
@@ -1096,19 +1033,16 @@
               <form method="dialog" class="modal-backdrop z-10">
                 <button
                   class="text-white absolute top-0 right-0"
-                  @click="clearData"
-                >
+                  @click="clearData">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    class="size-6"
-                  >
+                    class="size-6">
                     <path
                       fill-rule="evenodd"
                       d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                      clip-rule="evenodd"
-                    />
+                      clip-rule="evenodd" />
                   </svg>
                 </button>
               </form>
@@ -1120,8 +1054,7 @@
 
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -1199,15 +1132,35 @@
         createInputHandlers(phoneInputs, 10);
         createInputHandlers(zipInputs, 6);
 
-        // ===== FORM SUBMISSION =====
+
         form.addEventListener("submit", (e) => {
           e.preventDefault();
 
-          const phoneValue = phoneInputs.map((input) => input.value).join("");
-          const zipValue = zipInputs.map((input) => input.value).join("");
+          const name = document.getElementById("customer-name").value;
+          const email = document.getElementById("customer-email").value;
 
-          console.log("Zip:", zipValue);
-          console.log("Phone Number:", phoneValue);
+          const phoneInputs = Array.from(
+            { length: 10 },
+            (_, i) => document.getElementById(`phone-${i + 1}`).value
+          );
+          const phoneNumber = phoneInputs.join("");
+
+          const zipInputs = Array.from(
+            { length: 6 },
+            (_, i) => document.getElementById(`zip-${i + 1}`).value
+          );
+          const zipCode = zipInputs.join("");
+
+          const source =
+            form.querySelector('input[name="source"]:checked')?.value || "";
+
+          console.log({
+            name,
+            phoneNumber,
+            email,
+            zipCode,
+            source,
+          });
         });
       });
     </script>
@@ -1227,7 +1180,6 @@
               cleanlinessRating: "",
               designUniqueness: "",
               designPricingComparison: "",
-
               serviceSatisfaction: "",
               staffFriendliness: "",
               staffKnowledge: "",
@@ -1260,6 +1212,7 @@
                 this.errors.designPricingComparison =
                   "Please select an option.";
               }
+
               if (Object.keys(this.errors).length === 0) {
                 this.step = 3;
               }
@@ -1269,16 +1222,25 @@
               }
 
               if (Object.keys(this.errors).length === 0) {
-                console.log("Collected Form Data:", this.formData);
+                // Create filtered form data for non-purchased
+                const filteredData = {
+                  customerId: this.formData.customerId,
+                  salesExecutive: this.formData.salesExecutive,
+                  customerType: this.formData.customerType,
+                  nonPurchasedFeedback: this.formData.nonPurchasedFeedback,
+                };
+
+                console.log("Non-Purchased Feedback Data:", filteredData);
                 this.step = 4;
               }
             }
           },
+
           validateStep3() {
             this.errors = {};
             if (this.customerType === "purchased") {
               if (!this.formData.purchasedFeedback.serviceSatisfaction) {
-                this.errors.productSelection = "Please select an option.";
+                this.errors.serviceSatisfaction = "Please select an option.";
               }
               if (!this.formData.purchasedFeedback.staffFriendliness) {
                 this.errors.staffFriendliness = "Please select an option.";
@@ -1290,8 +1252,17 @@
                 this.errors.staffAttentiveness = "Please select an option.";
               }
             }
+
             if (Object.keys(this.errors).length === 0) {
-              console.log("Collected Form Data:", this.formData);
+              // Create filtered form data for purchased
+              const filteredData = {
+                customerId: this.formData.customerId,
+                salesExecutive: this.formData.salesExecutive,
+                customerType: this.formData.customerType,
+                purchasedFeedback: this.formData.purchasedFeedback,
+              };
+
+              console.log("Purchased Feedback Data:", filteredData);
               this.step = 4;
             }
           },
