@@ -29,7 +29,7 @@
 
           <div>
             <button
-              class="flex gap-1 items-center border cursor-pointer border-black rounded-sm py-2 px-4 hover:text-white hover:bg-black">
+              class="flex gap-1 items-center border cursor-pointer text-black border-black rounded-sm py-2 px-4 hover:text-white hover:bg-black">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -48,6 +48,7 @@
         background-image: url('assets/images/watermark.png');
         background-repeat: no-repeat;
         background-position: center;
+        background-size: 220px;
       ">
     <section class="p-4 py-8 md:p-16">
       <div class="border-b border-gray-300 pb-4 mb-4 flex gap-4 justify-between items-center flex-wrap">
@@ -207,7 +208,7 @@
       </div>
 
       <div class="p-4" x-data="getfeedbackData">
-        <div x-data="{customers: [{ id: '001', name: 'Madhu', gender: 'F', phone: '9123456789', email: 'madhu@gmail.com', dob: '1995-05-15', maritalStatus: 'Married', anniversaryDate:'2005-05-15', profession: 'Doctor', qualification: 'High School', address: 'abc', pincode: '534260' },{ id: '002', name: 'Gavya', gender: 'F', phone: '9123456789', email: 'madhu@gmail.com', dob: '1995-05-15', maritalStatus: 'Not Married', anniversaryDate: '2021-03-14', profession: 'Doctor', qualification: 'High School', address: 'abc', pincode: '534260' }]}" 
+        <div x-data="{customers: [{ id: '001', name: 'Madhu', gender: 'F', phone: '9123456789', email: 'madhu@gmail.com', dob: '1995-05-15', maritalStatus: 'Married', anniversaryDate:'2005-05-15', profession: 'Doctor', qualification: 'High School', address: 'abc', pincode: '534260' },{ id: '002', name: 'Gavya', gender: 'F', phone: '9123456789', email: 'madhu@gmail.com', dob: '1995-05-15', maritalStatus: 'Not Married', anniversaryDate: '', profession: 'Doctor', qualification: 'High School', address: 'abc', pincode: '534260' }]}" 
           class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 flex-wrap">
           
           <template x-for="(customer,index) in customers" :key="index">
@@ -258,7 +259,7 @@
                                 <div>
                                     <button type="button"
                                         @click="disabled = !disabled"
-                                        class="flex items-center gap-1 cursor-pointer px-4 py-2 text-sm border border-[#C7C7C7] rounded-sm">
+                                        class="flex items-center gap-1 cursor-pointer px-4 py-2 text-sm border  border-[#C7C7C7] rounded-sm">
                                         <svg width="14" height="14" viewBox="0 0 14 15" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M0.613296 9.58195C0.435577 9.75967 0.336844 9.97688 0.317097 10.2138L0.0011519 14.0052C-0.0185947 14.2816 0.218364 14.5186 0.494817 14.4988L4.28616 14.1829C4.52312 14.1632 4.76008 14.0644 4.91805 13.8867L11 7.80476L6.71499 3.5L0.613296 9.58195Z" fill="#4E5356" />
