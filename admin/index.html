@@ -10,7 +10,7 @@
 
 <body class="bg-[#FCFAF9] min-h-screen roboto antialiased text-black">
   <header class="bg-[#F2EDE4] border-b border-[#C7C7C7]">
-    <nav class="px-4 md:px-16 py-4 flex justify-between gap-10 items-center">
+    <nav class="px-4 md:px-16 py-4 flex justify-between gap-10 items-center ">
       <div>
         <a href="/">
           <img src="../assets/images/logo.svg" alt="logo" class="h-16" />
@@ -77,13 +77,23 @@
             background-size: 260px;
           ">
       <section class="py-8 px-6">
-        <div class="flex justify-between items-center gap-6">
+        <div class="flex flex-wrap justify-between items-center gap-6">
           <h1 class="text-xl font-semibold">Dashboard</h1>
 
-          <div class="flex gap-4 items-center">
-            <div>date</div>
+          <div class="flex flex-wrap gap-4 items-center">
+            <div x-data="{ open: false }" class="relative flex gap-1 items-center">
+              <div class="text-sm font-medium">Date:</div>
+              <!-- Input field to trigger the date picker -->
+              <input 
+                  x-ref="dateInput"
+                  type="date" 
+                  class="w-full px-4 py-2 border text-sm cursor-pointer border-gray-300 rounded-md bg-white"
+                  x-on:click="open = true; $nextTick(() => $refs.dateInput.showPicker())"
+              />
+              
+          </div>
 
-            <div x-data="showroomSelect()" class="relative w-64 mx-auto">
+            <div x-data="showroomSelect()" class="relative w-64">
               <!-- Toggle Button -->
               <button @click="open = !open"
                 class="w-full px-4 py-2 border text-sm cursor-pointer border-gray-300 rounded-md bg-white text-left flex justify-between items-center">
