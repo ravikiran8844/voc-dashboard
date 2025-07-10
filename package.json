@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+    "watch": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "postcss": "npx postcss ./assets/css/input.css -o ./assets/css/output.css --env production"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +13,14 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.0.13",
     "tailgrids": "^2.2.7",
-    "tailwindcss": "^4.0.13"
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
-    "daisyui": "^5.0.3"
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.3",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-preset-env": "^10.2.4"
   }
 }
